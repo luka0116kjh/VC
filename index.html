@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>ip</title>
+</head>
+
+<body>
+    <header>
+        <h1>IP란 무엇인가?</h1>
+        <p>네트워크에서 데이터를 주고받기 위한 통신 규약입니다. IP는 각 장치에 고유한 주소를 부여하여 서로를 구분할 수 있게 합니다.</p>
+    </header>
+
+    <main>
+        <h1>IP의 핵심 원리</h1>
+        <h2>IP 기본 방식</h2>
+        <ul>
+            <li>
+                <b>IP 주소:</b> 인터넷에 연결된 모든 장치의 고유 식별 번호입니다. 노트북, 핸드폰 등 인터넷을 사용할 수 있는 모든 장치에 부여된다
+                <aside> 
+                    <details>
+                        <summary>추가 설명</summary>
+                        <p>IP 주소는 일반적으로 DHCP에 의해 자동으로 할당됩니다.<br>
+                        하지만 서버처럼 항상 동일한 주소가 필요한 장치에는 수동으로 설정하기도 합니다. <br>
+                        <mark>DHCP</mark>  는 데이터 호스팅 구성 프로토콜으로 네크워크 접속한 기기를 자동으로 ip주소를 주는 시스템이다 <br>
+                        </p>
+                    </details>
+                </aside>
+            </li><br>
+
+            <li>
+                <b>패킷 전달:</b> 네트워크에서 데이터를 전송하는 기본 단위로, 큰 파일을 작은 조각으로 나눈다. 
+            </li><br>
+
+            <li>
+                <b>라우팅:</b> 패킷을 목적지까지 가장 효율적인 경로로 전달하는 과정입니다. <br>
+                추가적으로 라우터는 여러 네트워크를 연결하고 패킷의 목적지를 파악하여 가장 효율적인 경로를 찾아 데이터를 전달하는 길잡이 
+            </li><br>
+
+
+            <li>
+                <b>비신뢰성 전송:</b> IP는 전송 후 잘 도착했는지 확인하거나 보장하지 않는 방식입니다.
+                <aside>
+                    <details>
+                        <summary>예시 상항</summary>
+                        <p>우편을 보냈다고 해도 상대방이 실제로 받았는지 확인하지 않는 것과 비슷하다.</p>
+                    </details>
+                </aside>
+            </li><br>
+        </ul>
+
+        <hr>
+
+    <h1>IP 주소 버전</h1>
+    <h2>IP 주소 비교</h2>
+    <ul>
+        <li><b>IPv4: </b>ipv4는 흔히 접하는 192.168.0.1같은 형태이다 <br>
+        8비트씩 4부분으로 나누어 0~255까지 숫자로 표현을 하다 
+            <aside>
+                    <details>
+                        <summary>예시</summary>
+                        <img src="ip.png" alt="예시 이미지">
+                    </details>
+                </aside></li> <br>
+
+        <li><b>IPv6: </b>IPv4의 부족한 부분을 해결하기 위해 만든 IP주소다 <br>
+        주소 표기는 16비트씩 8부분으로 나누고, 각 부분은 16진수로 표현하며, 콜론(:)으로 구분합니다. 
+        예를 들어, 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li> <br>
+
+        <li><b>IPv4, IPv6 차이: </b> </li> <br>
+        <table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>IPv4</th>
+      <th>IPv6</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>주소길이</td>
+      <td>32비트 (4바이트)</td>
+      <td>128비트 (16바이트)</td>
+    </tr>
+
+    <tr>
+      <td>주소 표현 방식</td>
+      <td>점(.)으로 구분된 4부분의 10진수 (예: 192.168.0.1)</td>
+      <td>콜론(:)으로 구분된 8부분의 16진수 (예: 2001:0db8:85a3::8a2e:0370:7334)</td>
+    </tr>
+
+    <tr>
+      <td>가능한 주소 수</td>
+      <td>약 42억 개</td>
+      <td>약 3.4×10<sup>38</sup> 개 (사실상 무한대)</td>
+    </tr>
+
+    <tr>
+      <td>주소 자동 구성</td>
+      <td>DHCP 서버 필요</td>
+      <td>자체 자동 구성 가능</td>
+    </tr>
+
+    <tr>
+      <td>라우팅 효율</td>
+      <td>복잡하고 효율 낮음</td>
+      <td>더 효율적이고 빠름</td>
+    </tr>
+
+    <tr>
+      <td>보안 기능</td>
+      <td>별도 보안 적용 필요</td>
+      <td>IPsec 기본 내장</td>
+    </tr>
+  </tbody>
+</table>
+    </ul>
+
+    </main>
+    
+<footer>
+    <hr>
+    <a href="http.html">HTTP(곧 만들 예정)</a>
+</footer>
+</body>
+</html>
