@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>http</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css.css" />
+    <title>HTTP</title>
 </head>
 <body>
-     <header>
-     <h1>HTTP이란</h1>
-     <p>HTTP는 인터넷에서 웹 서버와 웹 브라우저가 서로 데이터를 주고 받기 위한 통신 규약 <br>
-    웹페이지를 접속, 파일 다운로드하는것이 HTTP이다.</p>
+    <header>
+        <h1>HTTP이란</h1>
+        <p>
+            HTTP는 인터넷에서 웹 서버와 웹 브라우저가 서로 데이터를 주고 받기 위한 통신 규약<br />
+            웹페이지를 접속하거나 파일을 다운로드하는 것이 HTTP입니다.
+        </p>
     </header>
     <main>
         <h1>HTTP의 핵심 원리</h1>
-    <ul>
-        <li><b>클라이언트-서버 모델: </b> </li>
-        <li><b>무상태성 모델: </b> </li>
-    </ul>
+        <ul>
+            <li><b>클라이언트-서버 모델:</b> 클라이언트가 요청을 보내고, 서버가 응답하는 구조</li>
+            <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 이전 요청의 상태를 기억하지 않음</li>
+        </ul>
 
-    
-    <h1>HTTP 요청과 응답</h1>
-    <p>HTTP 통신은 '요청','응답'으로 이루어진다.</p>
-    <br>
-    <h3> 요청 메세지</h3>
-    <br>
-    <ul>
-        <li><b>요청: </b> <br></li>
-        <li><b>헤더: </b> <br></li>
-        <li><b>본문: </b> <br></li>
-    </ul>
-    <br>
-    <h3>응답 메세지</h3>
-    <br>
-    <ul>
-        <li><b>상태 라인: </b> <br></li>
-        <li><b>헤더: </b> <br></li>
-        <li><b>본문: </b> <br></li>
-    </ul>
+        <h1>HTTP 요청과 응답</h1>
+        <p>HTTP 통신은 '요청'과 '응답'으로 이루어집니다.</p>
+
+        <h3>요청 메시지</h3>
+        <ul>
+            <li><b>요청 라인:</b> 요청 메서드(GET, POST 등), 요청 대상 URL, HTTP 버전</li>
+            <li><b>헤더:</b> 요청에 대한 추가 정보 (예: Host, User-Agent, Accept 등)</li>
+            <li><b>본문:</b> POST나 PUT 메서드에서 전송하는 데이터 (예: 폼 데이터, JSON)</li>
+        </ul>
+
+        <h3>응답 메시지</h3>
+        <ul>
+            <li><b>상태 라인:</b> HTTP 버전, 상태 코드(200, 404 등), 상태 메시지(OK, Not Found 등)</li>
+            <li><b>헤더:</b> 응답에 대한 추가 정보 (예: Content-Type, Set-Cookie 등)</li>
+            <li><b>본문:</b> 요청한 실제 데이터(HTML, 이미지, JSON 등)</li>
+        </ul>
     </main>
-    <hr>
+    <hr />
     <a href="index.html">IP 무엇인가가</a>
+    <a href="DNS.html">DNS는 무엇인가가</a>
 </body>
 </html>
