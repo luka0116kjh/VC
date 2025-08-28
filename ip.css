@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: white;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: powderblue;
+}
+
+header p {
+    font-size: 1.1em;
+    color: powderblue;
+}
+
+
+main h1, main h2 {
+    color: black;
+    margin-top: 20px;
+}
+
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+
+aside details {
+    margin-top: 5px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+
+mark {
+    background-color: yellow;
+    color: #000;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: powderblue;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: powderblue;
+}
+
+button a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: powderblue;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
