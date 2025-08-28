@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css.css" />
+    <title>DNS 작동 원리</title>
+</head>
+<body>
+    <header>
+        <h1>DNS란</h1>
+        <p>사용하기 쉬운 도메인 이름을 컴퓨터가 인터넷에서 서로를 식별하는 데 사용하는 IP 주소로 바꾸는 프로토콜</p>
+    </header>
+
+    <main>
+        <h1>DNS 작동 원리</h1>
+        <ul>
+            <li><b>클라이언트-서버 모델:</b> 클라이언트가 DNS 서버에 질의(request)하고, 서버가 응답(response)함</li>
+            <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 상태를 유지하지 않음</li>
+        </ul>
+
+        <h2>DNS 질의 처리 순서</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>단계</th>
+                    <th>설명</th>
+                    <th>관련 서버</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>사용자가 브라우저에 도메인 입력</td>
+                    <td>사용자 컴퓨터</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>로컬 DNS 캐시 확인</td>
+                    <td>운영체제 / 브라우저</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>캐시에 없으면 재귀 DNS 서버로 질의</td>
+                    <td>재귀 DNS 서버(ISP)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>루트 네임서버에 질의 (.com 위치 요청)</td>
+                    <td>루트 DNS 서버</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>.com TLD 네임서버에 질의 (example.com 위치 요청)</td>
+                    <td>TLD DNS 서버</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>권한 네임서버에 질의 (www.example.com의 IP 요청)</td>
+                    <td>권한 DNS 서버</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>IP 주소를 받아 브라우저에 전달</td>
+                    <td>재귀 DNS 서버</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>브라우저가 IP로 웹 서버에 접속</td>
+                    <td>웹 서버</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <hr />
+    <a href="index.html">IP 무엇인가가</a>
+    <a href="http.html">HTTP는 무엇인가가</a>
+</body>
+</html>
