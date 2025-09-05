@@ -1,87 +1,88 @@
 
 body {
-    font-family: 'Arial', 'Malgun Gothic', sans-serif;
-    background-color: #f5f7fa;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
+    line-height: 1.65;
+    margin: 20px;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 header {
-    background-color: #3762e6;
-    color: #fff;
-    padding: 30px 0 20px 0;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(55, 98, 230, 0.15);
+    margin-bottom: 24px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.25rem;
-    letter-spacing: 2px;
+    color: #000000;
+    font-size: 2.3rem;
+    margin-bottom: 8px;
 }
 
 header p {
-    margin-top: 18px;
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    color: #666666;
 }
 
-main {
-    max-width: 680px;
-    margin: 40px auto 0 auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(55,98,230,0.08);
-    padding: 35px 32px;
-}
-
-main h1 {
-    font-size: 1.65rem;
-    color: #3762e6;
+main h1, main h2 {
+    color: #000000;
+    margin-top: 28px;
     margin-bottom: 14px;
-    margin-top: 18px;
-    text-align: left;
 }
 
-ul {
-    padding-left: 20px;
-    margin-bottom: 22px;
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 24px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(135, 206, 250, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-li {
-    font-size: 1.08rem;
-    margin-bottom: 11px;
-    color: #222;
-    line-height: 1.6;
-}
-
-i {
-    color: #2851a3;
-}
-
-hr {
-    margin: 45px 0 20px 0;
-    border: none;
-    border-top: 1.5px solid #d1d9e6;
-}
-
-
-button {
-    background-color: #3762e6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 22px;
-    margin: 0 10px 20px 0;
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 12px 14px;
+    text-align: center;
     font-size: 1rem;
+    color: #234183;
+}
+
+table th {
+    background-color: #87ceeb;
+    font-weight: 700;
+}
+
+button.ip-button,
+button.domain-button,
+button.dns-button {
+    margin: 5px 8px 5px 0;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #b9dbfa;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(55, 98, 230, 0.06);
     cursor: pointer;
-    transition: background-color 0.24s;
+    transition: background-color 0.18s;
+}
+
+button.ip-button:hover,
+button.domain-button:hover,
+button.dns-button:hover {
+    background-color: #76b6ea;
 }
 
 button a {
     color: inherit;
     text-decoration: none;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #274aac;
+footer {
+    text-align: center;
+    margin-top: 28px;
+    color: #888888;
+    font-size: 1rem;
 }
