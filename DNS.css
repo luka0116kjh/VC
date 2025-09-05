@@ -1,66 +1,80 @@
 
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
+    line-height: 1.65;
     margin: 20px;
-    background-color: white;
-    color: #333;
+    background-color: #ffffff;
+    color: #333333;
 }
+
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 header h1 {
-    color: black;
+    color: #000000;
+    font-size: 2.3rem;
+    margin-bottom: 8px;
 }
 
 header p {
     font-size: 1.1em;
-    color: gray;
+    color: #666666;
 }
 
-main h1, h2 {
-    color: black;
-    margin-top: 20px;
+
+main h1, main h2 {
+    color: #000000;
+    margin-top: 28px;
+    margin-bottom: 14px;
 }
 
 
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 20px 0;
-    background-color: #fff;
+    margin: 24px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(135, 206, 250, 0.3); 
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-table th, td {
+table th, table td {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 12px 14px;
     text-align: center;
+    font-size: 1rem;
 }
 
 table th {
-    background-color: powderblue;
-    color: white;
+    background-color: #87ceeb; 
+    color: #ffffff;
+    font-weight: 700;
 }
 
 
 button {
-    margin: 5px;
-    padding: 10px 15px;
+    margin: 5px 8px 5px 0;
+    padding: 11px 18px;
     border: none;
     border-radius: 8px;
-    background-color: skyblue;
-}
-
-button a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    background-color: #87ceeb; 
+    box-shadow: 0 2px 6px rgba(135, 206, 235, 0.4);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
 }
 
 button:hover {
-    background-color: skyblue;
-    cursor: pointer;
+    background-color: #5dade2; 
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
 }
