@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
     line-height: 1.65;
@@ -5,24 +6,29 @@ body {
     background-color: #ffffff;
     color: #333333;
 }
+
 header {
     text-align: center;
     margin-bottom: 24px;
 }
+
 header h1 {
     color: #000000;
     font-size: 2.3rem;
     margin-bottom: 8px;
 }
+
 header p {
     font-size: 1.1em;
     color: #666666;
 }
+
 main h1, main h2 {
-    color: #3762e6;
+    color: #000000;
     margin-top: 28px;
     margin-bottom: 14px;
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -32,33 +38,51 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
+
 table th, table td {
     border: 1px solid #ccc;
     padding: 12px 14px;
     text-align: center;
     font-size: 1rem;
+    color: #234183;
 }
+
 table th {
     background-color: #87ceeb;
-    color: #ffffff;
     font-weight: 700;
 }
-button {
+
+button.ip-button,
+button.domain-button,
+button.dns-button {
     margin: 5px 8px 5px 0;
     padding: 11px 18px;
     border: none;
     border-radius: 8px;
-    background-color: #3762e6;
-    box-shadow: 0 2px 6px rgba(55, 98, 230, 0.4);
-    cursor: pointer;
-    transition: background-color 0.25s ease;
-}
-button:hover {
-    background-color: #2749a3; 
-}
-button a {
+    background-color: #b9dbfa;
     color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(55, 98, 230, 0.06);
+    cursor: pointer;
+    transition: background-color 0.18s;
+}
+
+button.ip-button:hover,
+button.domain-button:hover,
+button.dns-button:hover {
+    background-color: #76b6ea;
+}
+
+button a {
+    color: inherit;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 28px;
+    color: #888888;
     font-size: 1rem;
 }
