@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -47,8 +46,19 @@ hr {
     border-top: 1px solid #bbb;
     margin: 32px 0 18px 0;
 }
+
+nav.button-wrapper {
+    max-width: 750px;
+    margin: 40px auto 60px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 button.nav {
-    margin: 5px 8px 5px 0;
+    margin: 0;
     padding: 11px 18px;
     border: none;
     border-radius: 8px;
