@@ -107,7 +107,7 @@ button.nav {
     border: none;
     border-radius: 8px;
     background-color: #87ceeb;
-    color: #000; 
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 0 2px 6px rgba(135, 206, 235, 0.16);
@@ -115,6 +115,7 @@ button.nav {
     transition: background-color 0.18s;
     display: inline-block;
 }
+
 button.nav:hover {
     background-color: #5dade2;
 }
@@ -123,3 +124,4 @@ button.nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
