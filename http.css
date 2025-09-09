@@ -1,76 +1,94 @@
-body {
-    font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
-    line-height: 1.65;
-    margin: 20px;
-    background-color: #ffffff;
-    color: #333333;
-}
+body, html {
+        height: 100%;
+        margin: 0;
+    }
 
-header {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #000000; 
-}
+    body {
+        font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
+        line-height: 1.65;
+        background-color: #ffffff;
+        color: #333333;
+        margin: 20px;
+        display: flex;
+        justify-content: center; /* 가로 가운데 */
+        align-items: center;     /* 세로 가운데 */
+        min-height: 100vh;
+    }
 
-header h1 {
-    color: #000000;
-    font-size: 2.3rem;
-    margin-bottom: 8px;
-}
+    main {
+        max-width: 700px;
+        text-align: center; /* 텍스트 중앙 정렬 */
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(135, 206, 250, 0.3);
+        border-radius: 10px;
+        background-color: #fff;
+    }
 
-header p {
-    font-size: 1.1em;
-    color: #666666;
-}
+    header {
+        text-align: center;
+        margin-bottom: 24px;
+        color: #000000;
+    }
 
-main h1, main h2 {
-    color: #000000;
-    margin-top: 28px;
-    margin-bottom: 14px;
-}
+    header h1 {
+        color: #000000;
+        font-size: 2.3rem;
+        margin-bottom: 8px;
+    }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 24px 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(135, 206, 250, 0.3);
-    border-radius: 8px;
-    overflow: hidden;
-}
+    header p {
+        font-size: 1.1em;
+        color: #666666;
+        margin-top: 0;
+    }
 
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 12px 14px;
-    text-align: center;
-    font-size: 1rem;
-}
+    main h1, main h2 {
+        color: #000000;
+        margin-top: 28px;
+        margin-bottom: 14px;
+    }
 
-table th {
-    background-color: #87ceeb;
-    color: #ffffff;
-    font-weight: 700;
-}
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 24px 0;
+        background-color: #ffffff;
+        box-shadow: 0 2px 6px rgba(135, 206, 250, 0.3);
+        border-radius: 8px;
+        overflow: hidden;
+    }
 
-button {
-    margin: 5px 8px 5px 0;
-    padding: 11px 18px;
-    border: none;
-    border-radius: 8px;
-    background-color: #87ceeb;
-    box-shadow: 0 2px 6px rgba(135, 206, 235, 0.4);
-    cursor: pointer;
-    transition: background-color 0.25s ease;
-}
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 12px 14px;
+        text-align: center;
+        font-size: 1rem;
+    }
 
-button:hover {
-    background-color: #5dade2;
-}
+    table th {
+        background-color: #87ceeb;
+        color: #ffffff;
+        font-weight: 700;
+    }
 
-button a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-}
+    button {
+        margin: 5px 8px 5px 0;
+        padding: 11px 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: #87ceeb;
+        box-shadow: 0 2px 6px rgba(135, 206, 235, 0.4);
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+    }
 
+    button:hover {
+        background-color: #5dade2;
+    }
+
+    button a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+    }
