@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DNS 작동 원리</title>
+    <link rel="stylesheet" href="DNS.css" />
+</head>
+<body>
+    <header>
+        <h1>DNS란</h1>
+        <p>도메인 이름을 컴퓨터가 식별 가능한 IP 주소로 변환해주는 프로토콜(Domain Name System)입니다.</p>
+    </header>
+    <main>
+        <h1>DNS 작동 원리</h1>
+        <ul>
+            <li><b>클라이언트-서버 모델:</b> 클라이언트가 DNS 서버에 질의(request)하고, 서버가 응답(response)합니다.</li>
+            <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 상태를 기억하지 않습니다.</li>
+        </ul>
+        <h2>DNS 질의 처리 순서</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>단계</th>
+                    <th>설명</th>
+                    <th>관련 서버</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>도메인 입력</td><td>사용자 컴퓨터</td></tr>
+                <tr><td>2</td><td>로컬 DNS 캐시 확인</td><td>운영체제/브라우저</td></tr>
+                <tr><td>3</td><td>캐시에 없으면 재귀 DNS 서버로 질의</td><td>재귀 DNS 서버(ISP)</td></tr>
+                <tr><td>4</td><td>루트 네임서버 질의(.com 위치 요청)</td><td>루트 DNS 서버</td></tr>
+                <tr><td>5</td><td>TLD 네임서버 질의(example.com 위치 요청)</td><td>TLD DNS 서버</td></tr>
+                <tr><td>6</td><td>권한 네임서버 질의(www.example.com의 IP 요청)</td><td>권한 DNS 서버</td></tr>
+                <tr><td>7</td><td>IP 주소를 받아 브라우저에 전달</td><td>재귀 DNS 서버</td></tr>
+                <tr><td>8</td><td>브라우저가 IP로 웹 서버 접속</td><td>웹 서버</td></tr>
+            </tbody>
+        </table>
+    </main>
+    <hr />
+    <nav class="button-wrapper">
+        <button class="nav home"><a href="index.html">home</a></button>
+        <button class="nav http"><a href="http.html">HTTP</a></button>
+        <button class="nav ip"><a href="ip.html">IP</a></button>
+        <button class="nav hosting"><a href="hosting.html">hosting</a></button>
+        <button class="nav domain"><a href="domain.html">Domain</a></button>
+        <button class="nav dns"><a href="DNS.html">DNS</a></button>
+    </nav>
+</body>
+</html>
