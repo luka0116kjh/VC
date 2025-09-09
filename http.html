@@ -4,7 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTTP이란?</title>
-    <link rel="stylesheet" href="http.css" />
+    <style>
+        body {
+            font-family: 'Arial', 'Helvetica', 'Malgun Gothic', sans-serif;
+            line-height: 1.65;
+            background-color: #fff;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 40px;
+        }
+        header h1 {
+            color: #000;
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        header p {
+            font-size: 1.15em;
+            color: #222;
+            margin-bottom: 0;
+        }
+        main {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 30px 0 0 0;
+        }
+        main h1 {
+            color: #000;
+            font-size: 1.7rem;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 22px;
+            margin-bottom: 22px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.07rem;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #bbb;
+            margin: 32px 0 18px 0;
+        }
+        /* 버튼 감싸는 래퍼 : flex로 가운데 정렬 */
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+            margin-bottom: 30px;
+        }
+        button.nav {
+            margin: 0;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #87ceeb;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(135, 206, 235, 0.16);
+            cursor: pointer;
+            transition: background-color 0.18s;
+            display: inline-block;
+        }
+        button.nav:hover {
+            background-color: #5dade2;
+        }
+        button.nav a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,17 +99,14 @@
             <li><b>클라이언트-서버 모델:</b> 클라이언트가 요청을 보내고, 서버가 응답하는 구조</li>
             <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 이전 요청의 상태를 기억하지 않음</li>
         </ul>
-
         <h1>HTTP 요청과 응답</h1>
         <p>HTTP 통신은 '요청'과 '응답'으로 이루어집니다.</p>
-
         <h3>요청 메시지</h3>
         <ul>
             <li><b>요청 라인:</b> 요청 메서드(GET, POST 등), 요청 대상 URL, HTTP 버전</li>
             <li><b>헤더:</b> 요청에 대한 추가 정보 (예: Host, User-Agent, Accept 등)</li>
             <li><b>본문:</b> POST나 PUT 메서드에서 전송하는 데이터 (예: 폼 데이터, JSON)</li>
         </ul>
-
         <h3>응답 메시지</h3>
         <ul>
             <li><b>상태 라인:</b> HTTP 버전, 상태 코드(200, 404 등), 상태 메시지(OK, Not Found 등)</li>
@@ -39,11 +115,13 @@
         </ul>
     </main>
     <hr />
-    <button class="nav home"><a href="index.html">home</a></button>
-    <button class="nav http"><a href="http.html">HTTP</a></button>
-    <button class="nav ip"><a href="ip.html">IP</a></button>
-    <button class="nav hosting"><a href="hosting.html">hosting</a></button>
-    <button class="nav domain"><a href="domain.html">Domain</a></button>
-    <button class="nav dns"><a href="DNS.html">DNS</a></button>
+    <div class="button-wrapper">
+        <button class="nav home"><a href="index.html">home</a></button>
+        <button class="nav http"><a href="http.html">HTTP</a></button>
+        <button class="nav ip"><a href="ip.html">IP</a></button>
+        <button class="nav hosting"><a href="hosting.html">hosting</a></button>
+        <button class="nav domain"><a href="domain.html">Domain</a></button>
+        <button class="nav dns"><a href="DNS.html">DNS</a></button>
+    </div>
 </body>
 </html>
