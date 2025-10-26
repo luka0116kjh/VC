@@ -44,5 +44,4 @@ DNS 서버가 이 도메인을 실제 IP 주소로 변환해줌.
 ✍️ Author
 
 Luka
-고등학교 2학년 | 학생 & 프로그래머
 📚 Web / Programming / AI Engineering
