@@ -2,50 +2,57 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTTP이란?</title>
-     <link rel="stylesheet" href="http.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP | VC Web Core</title>
+    <link rel="stylesheet" href="globals.css" />
 </head>
 <body>
     <header>
-        <h1>HTTP이란?</h1>
-        <p>
-            HyperText Transfer Protocol의 약자로 인터넷에서 웹 서버와 웹 브라우저가 서로 데이터를 주고 받기 위한 통신 규약입니다.<br />
-            웹페이지를 접속하거나 파일을 다운로드하는 것이 HTTP입니다.
-        </p>
+        <h1>HTTP 이란?</h1>
+        <p>HyperText Transfer Protocol - 웹의 심장박동</p>
     </header>
+
     <main>
-        <h1>HTTP의 핵심 원리</h1>
-        <ul>
-            <li><b>클라이언트-서버 모델:</b> 클라이언트가 요청을 보내고, 서버가 응답하는 구조</li>
-            <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 이전 요청의 상태를 기억하지 않음</li>
-        </ul>
-        <h1>HTTP 요청과 응답</h1>
-        <p>HTTP 통신은 '요청'과 '응답'으로 이루어집니다.</p>
-        <h3>요청 메시지</h3>
-        <ul>
-            <li><b>요청 라인:</b> 요청 메서드(GET, POST 등), 요청 대상 URL, HTTP 버전</li>
-            <li><b>헤더:</b> 요청에 대한 추가 정보 (예: Host, User-Agent, Accept 등)</li>
-            <li><b>본문:</b> POST나 PUT 메서드에서 전송하는 데이터 (예: 폼 데이터, JSON)</li>
-        </ul>
-        <h3>응답 메시지</h3>
-        <ul>
-            <li><b>상태 라인:</b> HTTP 버전, 상태 코드(200, 404 등), 상태 메시지(OK, Not Found 등)</li>
-            <li><b>헤더:</b> 응답에 대한 추가 정보 (예: Content-Type, Set-Cookie 등)</li>
-            <li><b>본문:</b> 요청한 실제 데이터(HTML, 이미지, JSON 등)</li>
-        </ul>
+        <article class="content-wrapper">
+            <p>
+                <b>HTTP</b>는 인터넷에서 웹 서버와 웹 브라우저가 서로 데이터를 주고받기 위한 전 세계 공통의 통신 규약입니다. 
+                우리가 웹페이지를 방문하고, 이미지를 불러오고, 파일을 다운로드하는 모든 과정이 바로 HTTP 인터랙션입니다.
+            </p>
+
+            <h2>HTTP의 2대 핵심 원리</h2>
+            <ul>
+                <li><b>클라이언트-서버 모델:</b> 브라우저(클라이언트)가 질문(요청)을 던지면, 서버가 답변(응답)을 주는 수직적 구조입니다.</li>
+                <li><b>무상태성(Stateless):</b> 각 요청은 이전의 기록을 기억하지 않는 독립적인 사건입니다. 마치 매번 처음 만나는 사람처럼 통신하여 서버의 부담을 줄입니다.</li>
+            </ul>
+
+            <h2>요청(Request)의 구성</h2>
+            <p>클라이언트가 서버에 무엇을 원하는지 상세히 적은 편지와 같습니다.</p>
+            <ul>
+                <li><b>요청 라인:</b> 무엇을(URL), 어떻게(GET/POST/PUT), 어떤 버전으로 요청할지 명시합니다.</li>
+                <li><b>헤더:</b> 브라우저 정보, 허용되는 파일 형식 등 메타데이터를 담습니다.</li>
+                <li><b>본문(Body):</b> 로그인 정보나 게시글 같은 실제 전송 데이터를 포함합니다.</li>
+            </ul>
+
+            <h2>응답(Response)의 구성</h2>
+            <p>서버가 요청을 처리한 결과를 담아 보내는 답장입니다.</p>
+            <ul>
+                <li><b>상태 라인:</b> 성공(200), 실패(404), 오류(500) 등의 상태 코드와 메시지입니다.</li>
+                <li><b>본문(Body):</b> 우리가 실제로 보게 되는 HTML 코드, 이미지 데이터, JSON 등이 담겨 있습니다.</li>
+            </ul>
+
+            <div class="button-wrapper">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="http.html" class="nav-link active">HTTP</a>
+                <a href="ip.html" class="nav-link">IP</a>
+                <a href="hosting.html" class="nav-link">Hosting</a>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="DNS.html" class="nav-link">DNS</a>
+            </div>
+        </article>
     </main>
-    <hr />
-    <div class="button-wrapper">
-        <button class="nav home"><a href="index.html">home</a></button>
-        <button class="nav http"><a href="http.html">HTTP</a></button>
-        <button class="nav ip"><a href="ip.html">IP</a></button>
-        <button class="nav hosting"><a href="hosting.html">hosting</a></button>
-        <button class="nav domain"><a href="domain.html">Domain</a></button>
-        <button class="nav dns"><a href="DNS.html">DNS</a></button>
-    </div>
+
+    <footer>
+        <p>© 2026 Luka | Web Core Concepts</p>
+    </footer>
 </body>
 </html>
-
-
-

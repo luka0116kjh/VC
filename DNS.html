@@ -2,53 +2,143 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DNS 작동 원리</title>
-    <link rel="stylesheet" href="DNs.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNS | VC Web Core</title>
+    <link rel="stylesheet" href="globals.css" />
+    <style>
+        .process-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .process-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+        .process-item:hover {
+            transform: translateX(10px);
+            background: rgba(56, 189, 248, 0.05);
+            border-color: var(--accent-primary);
+        }
+        .step-number {
+            background: var(--accent-primary);
+            color: var(--bg-dark);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+        .step-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>DNS란</h1>
-        <p>Domain Name System의  약자로 도메인 이름을 컴퓨터가 식별 가능한 IP 주소로 변환해주는 프로토콜(Domain Name System)입니다.</p>
+        <h1>DNS 란?</h1>
+        <p>Domain Name System - 인터넷의 거대한 전화번호부</p>
     </header>
+
     <main>
-        <h1>DNS 작동 원리</h1>
-        <ul>
-            <li><b>클라이언트-서버 모델:</b> 클라이언트가 DNS 서버에 질의(request)하고, 서버가 응답(response)합니다.</li>
-            <li><b>무상태성 모델:</b> 각 요청은 독립적으로 처리되며 상태를 기억하지 않습니다.</li>
-        </ul>
-        <h2>DNS 질의 처리 순서</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>단계</th>
-                    <th>설명</th>
-                    <th>관련 서버</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>도메인 입력</td><td>사용자 컴퓨터</td></tr>
-                <tr><td>2</td><td>로컬 DNS 캐시 확인</td><td>운영체제/브라우저</td></tr>
-                <tr><td>3</td><td>캐시에 없으면 재귀 DNS 서버로 질의</td><td>재귀 DNS 서버(ISP)</td></tr>
-                <tr><td>4</td><td>루트 네임서버 질의(.com 위치 요청)</td><td>루트 DNS 서버</td></tr>
-                <tr><td>5</td><td>TLD 네임서버 질의(example.com 위치 요청)</td><td>TLD DNS 서버</td></tr>
-                <tr><td>6</td><td>권한 네임서버 질의(www.example.com의 IP 요청)</td><td>권한 DNS 서버</td></tr>
-                <tr><td>7</td><td>IP 주소를 받아 브라우저에 전달</td><td>재귀 DNS 서버</td></tr>
-                <tr><td>8</td><td>브라우저가 IP로 웹 서버 접속</td><td>웹 서버</td></tr>
-            </tbody>
-        </table>
+        <article class="content-wrapper">
+            <p>
+                <b>DNS</b>는 사람이 읽을 수 있는 도메인 이름(예: www.google.com)을 컴퓨터가 이해할 수 있는 IP 주소(예: 142.250.196.110)로 변환해주는 시스템입니다. 
+                우리가 브라우저에 주소를 입력하면, DNS가 실제 서버의 위치를 찾아 연결해주는 '내비게이션' 역할을 수행합니다.
+            </p>
+
+            <h2>DNS 작동 원리 (8단계)</h2>
+            <p>주소를 입력하고 페이지가 뜨기까지, DNS는 보이지 않는 곳에서 복잡한 과정을 거칩니다.</p>
+
+            <div class="process-list">
+                <div class="process-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>도메인 입력</h3>
+                        <p>사용자가 브라우저 주소창에 www.example.com을 입력합니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>로컬 캐시 확인</h3>
+                        <p>브라우저와 OS가 이미 알고 있는 주소인지 먼저 확인합니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>재귀 DNS 서버 질의</h3>
+                        <p>캐시에 없으면 ISP의 재귀 DNS 서버에 도움을 요청합니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>루트 네임서버</h3>
+                        <p>".com" 같은 최상위 정보를 어디서 찾을지 안내받습니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>TLD 네임서버</h3>
+                        <p>"example.com"의 관리 서버 주소를 전달받습니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>권한 네임서버</h3>
+                        <p>최종적으로 "www.example.com"의 정확한 IP 주소를 획득합니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>IP 주소 전달</h3>
+                        <p>찾아낸 IP 주소를 사용자 브라우저에 전달합니다.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h3>웹 서버 접속</h3>
+                        <p>드디어 브라우저가 해당 IP로 직접 데이터를 요청합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-wrapper">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="http.html" class="nav-link">HTTP</a>
+                <a href="ip.html" class="nav-link">IP</a>
+                <a href="hosting.html" class="nav-link">Hosting</a>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="DNS.html" class="nav-link active">DNS</a>
+            </div>
+        </article>
     </main>
-    <hr />
-    <nav class="button-wrapper">
-        <button class="nav home"><a href="index.html">home</a></button>
-        <button class="nav http"><a href="http.html">HTTP</a></button>
-        <button class="nav ip"><a href="ip.html">IP</a></button>
-        <button class="nav hosting"><a href="hosting.html">hosting</a></button>
-        <button class="nav domain"><a href="domain.html">Domain</a></button>
-        <button class="nav dns"><a href="DNS.html">DNS</a></button>
-    </nav>
+
+    <footer>
+        <p>© 2026 Luka | Web Core Concepts</p>
+    </footer>
 </body>
 </html>
-
-
-
